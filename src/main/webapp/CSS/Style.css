@@ -1,0 +1,149 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    color: #333;
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Dashboard Flex Layout */
+.dashboard {
+    display: flex;
+    gap: 30px;
+}
+
+/* LEFT: FORM */
+.form-container {
+    flex: 1;
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.form-container h3 {
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.user-form .form-group {
+    margin-bottom: 15px;
+}
+
+.user-form label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.user-form input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.user-form input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0,123,255,0.3);
+    outline: none;
+}
+
+.user-form button {
+    width: 100%;
+    padding: 12px 0;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.user-form button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* RIGHT: TABLE */
+.table-container {
+    flex: 2;
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.table-container h3 {
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+thead {
+    background: #007bff;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+tbody tr:hover {
+    background: #e1f0ff;
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media(max-width:1024px){
+    .dashboard {
+        flex-direction: column;
+    }
+}

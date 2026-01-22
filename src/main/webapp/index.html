@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Information Form</title>
+    <link rel="stylesheet" href="./CSS/Style.css">
+</head>
+<body>
+
+<div id="msg" class="success-message" style="display:none;">
+    User added successfully!
+</div>
+
+<form action="Mainservlet" method="post">
+
+    <label>Username:</label>
+    <input type="text" name="userName" required>
+
+    <label>Email:</label>
+    <input type="email" name="mail" required>
+
+    <label>Joining Date:</label>
+    <input type="date" name="date">
+
+    <label>Password:</label>
+    <input type="password" name="password" required>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("success") === "true") {
+        document.getElementById("msg").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
